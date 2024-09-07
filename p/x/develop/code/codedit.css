@@ -1,0 +1,292 @@
+@import url("workbench.desktop.main.backup.css");
+
+/*--------------------------------------------------------------------------------------------*/
+.view-line > span > span:focus ~ span {
+  text-decoration: none !important;
+  opacity: calc(1 / 1) !important;
+  width: auto !important;
+}
+
+.view-line > span > span {
+  opacity: calc(1 / 4);
+}
+
+.mtku {
+  text-decoration: none !important;
+  opacity: calc(0 / 1) !important;
+  display: inline-flex !important;
+  width: 7.5px !important;
+  overflow: hidden;
+}
+
+.mtks + .mtk1,
+.mtks {
+  display: inline-flex !important;
+  width: 0 !important;
+  overflow: hidden;
+}
+
+.mtki {
+  opacity: calc(1 / 1) !important;
+  font-style: normal !important;
+}
+
+.mtkb {
+  opacity: calc(1 / 1) !important;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*widget*/
+.monaco-editor .peekview-widget .head .peekview-title {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.monaco-workbench .part > .content {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.monaco-findInput .monaco-inputbox {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.search-view .query-details.more h4 {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.monaco-editor .find-widget .monaco-findInput .input {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.monaco-editor .find-widget > .find-part {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*explorer-rows*/
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row > .monaco-tl-row > .monaco-tl-twistie {
+  opacity: 0;
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row[aria-selected="true"] {
+  font-weight: bold;
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row[aria-expanded="false"] {
+  color: #0047003F;
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row[aria-expanded="true"] {
+  color: #004700FF;
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row {
+  color: #7F0000FF;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*explorer*/
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows > .monaco-list-row {
+  line-height: var(--text-type) !important;
+  height: var(--text-type) !important;
+}
+
+.explorer-folders-view .editor-group,
+.explorer-folders-view .explorer-item {
+  line-height: var(--text-type) !important;
+  height: var(--text-type) !important;
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows span {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+.explorer-folders-view > .monaco-list > .monaco-scrollable-element > .monaco-list-rows {
+  margin-left: -42px;
+}
+
+.explorer-folders-view .monaco-list-row {
+  padding-left: 0;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*sidebar-header*/
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar .action-item {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+  text-transform: lowercase;
+}
+
+.monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar {
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+}
+
+.monaco-action-bar .action-label {
+  font-size: var(--text-size);
+}
+
+.monaco-workbench .part > .composite.header-or-footer,
+.monaco-workbench .part > .composite.title {
+  padding: 0 var(--text-size) 0 var(--text-size);
+  border-bottom: 1px solid #E1E1E1FF;
+}
+
+.monaco-workbench .part.sidebar > .title > .title-label h2 {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+  text-transform: lowercase;
+}
+
+.monaco-workbench .part > .title > .title-actions {
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+}
+
+.monaco-workbench .part > .title > .title-label {
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+}
+
+.monaco-workbench .part > .title {
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+  background-color: #FFFFFFFF;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*sidebar-sub-header*/
+.monaco-pane-view .pane > .pane-header h3.title {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+  text-transform: lowercase;
+}
+
+.monaco-workbench .part > .title > .title-label {
+  padding-left: 0;
+}
+
+.monaco-workbench .part > .title {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*tab*/
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.tab-label a,
+.monaco-workbench .part.editor > .content .editor-group-container > .title .title-label a,
+.label-name {
+  font-family: var(--text-type) !important;
+  font-size: var(--text-size) !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.sizing-fixed.close-action-off:not(.sticky-compact) {
+  padding-right: var(--text-size) !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.active {
+  font-weight: bold !important;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+  padding-left: var(--text-size) !important;
+  border-bottom: 1px solid #E1E1E1FF;
+  box-sizing: border-box;
+}
+
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+  line-height: calc(var(--text-size) * 2);
+  height: calc(var(--text-size) * 2);
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*statusbar-text*/
+.monaco-workbench .part.statusbar {
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+  text-transform: lowercase;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*scrollbar-shadow-panel*/
+.monaco-scrollable-element > .shadow.top {
+  box-shadow: #00000000 0 0 0 0 inset;
+  height: 0;
+}
+
+/*scrollbar-shadow-tab*/
+.monaco-editor .scroll-decoration {
+  box-shadow: #00000000 0 0 0 0 inset;
+  height: 0;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*icon-activitybar-extension*/
+.monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-label:not(.codicon) {
+  font-size: var(--text-size);
+}
+
+/*icon-activitybar-inbuilt*/
+.monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-label.codicon {
+  font-size: var(--text-size);
+}
+
+/*icon-statusbar-custom*/
+.custom-statusbar .monaco-workbench .part.statusbar > .items-container > div.statusbar-item span.codicon {
+  font-size: var(--text-size);
+}
+
+/*icon-statusbar*/
+.monaco-workbench .part.statusbar > .items-container > .statusbar-item span.codicon {
+  font-size: var(--text-size);
+}
+
+/*icon-sidebar*/
+.monaco-action-bar .action-item .codicon {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/*icon*/
+.monaco-workbench .codicon[class*=codicon-] {
+  font-size: var(--text-size);
+}
+
+/*--------------------------------------------------------------------------------------------*/
+.linux,
+.mac {
+  --monaco-monospace-font: var(--text-type);
+  font-family: var(--text-type);
+  font-size: var(--text-size);
+}
+
+:root {
+  --text-type: 'PragmataPro Mono', monospace;
+  --text-size: calc(15px * 0.8);
+  --text-high: 1;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*
+hint:
+  string    = 000000FF
+  variable  = FF0000FF
+  property  = FF00FFFF
+  parameter = 00FF00FF
+  function  = 0000FFFF
+  method    = 00FFFFFF
+*/

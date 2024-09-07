@@ -1,0 +1,84 @@
+---
+silent: true
+tasks:
+  cleanse:
+    cmds:
+      - nix-collect-garbage --delete-old
+  code:
+    cmds:
+      - sudo chown --recursive   --no-dereference x             ~/.config/Code\ -\ Insiders/User/settings.json
+      - sudo chmod --recursive                    0777          ~/.config/Code\ -\ Insiders/User/settings.json
+      - sudo chown --recursive   --no-dereference x             ~/.config/hypr/hyprland.conf
+      - sudo chmod --recursive                    0777          ~/.config/hypr/hyprland.conf
+      - sudo chown --recursive   --no-dereference x             ~/.config/hypr/shading.glsl
+      - sudo chmod --recursive                    0777          ~/.config/hypr/shading.glsl
+      - sudo chown --recursive   --no-dereference x             ~/codedit.css
+      - sudo chmod --recursive                    0777          ~/codedit.css
+      - sudo chown --recursive   --no-dereference x             ~/codedit.js
+      - sudo chmod --recursive                    0777          ~/codedit.js
+      - clear
+  codedit:
+    cmds:
+      - sudo chown --recursive   --no-dereference x             .
+      - sudo chmod --recursive                    0777          .
+      - cp         --update=none                                workbench.desktop.main.css workbench.desktop.main.backup.css
+      - sudo rm    --recursive                                  workbench.desktop.main.css
+      - sudo ln    --symbolic                     ~/codedit.css workbench.desktop.main.css
+    dir: /nix/store/xiayycf81c4ddvqn28n86hnkmw6c52nk-vscode-insiders-latest/lib/vscode/resources/app/out/vs/workbench/
+  codedit-find:
+    cmds:
+      - ls | grep "vscode-insiders"
+    dir: /nix/store/
+  cursor-dot-red:
+    cmds:
+      - rm -rf    ∤/*
+      - ctgen     red.yaml
+      - tar -czvf ∤/dot-red-1.4.tar.gz --directory ∤/dot-red/ dot-red/
+      - clear
+    dir: x/point/
+  cursor-dot-y:
+    cmds:
+      - rm -rf    ∤/*
+      - ctgen     dot-y.yaml
+      - tar -czvf ∤/dot-y-1.4.tar.gz --directory ∤/dot-y/ dot-y/
+    dir: x/point/
+  cursor-hyprcursor:
+    cmds:
+      - mkdir -p ~/.local/share/icons
+      - hyprcursor-util --create x/point/dot/r --output ~/.local/share/icons
+  format:
+    cmds:
+      - nix fmt
+  o:
+    cmds:
+      - sudo nixos-rebuild switch {{.CLI_ARGS}}
+  o-x:
+    cmds:
+      - task o -- {{.CLI_ARGS}} --impure --flake .#x
+  p:
+    cmds:
+      - home-manager switch {{.CLI_ARGS}}
+  p-x:
+    cmds:
+      - task p -- {{.CLI_ARGS}} --impure --flake .#x@x
+      - task code
+      - clear
+  password:
+    cmds:
+      - mkpasswd --method=sha-512 --salt=HarayKrsna
+  rebuild-boot:
+    cmds:
+      - sudo nixos-rebuild boot --impure
+  repair:
+    cmds:
+      - sudo nix-store --verify --repair --check-contents
+  sync:
+    cmds:
+      - git add --all
+      - git commit --all --message='changes'
+      - git push
+      - clear
+  update:
+    cmds:
+      - sudo nix flake update
+version: '3'

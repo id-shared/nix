@@ -1,0 +1,10 @@
+# to register all preview features:
+az feature list --query "[?properties.state=='NotRegistered'].{Name:name}" --output tsv | while read name
+  set -l part (string split "/" $name)
+  az feature register --namespace $part[1] --name $part[2] &
+  # Limit the number of concurrent processes
+  if test (count (jobs)) -ge 10
+    wait -n
+  end
+end
+wait

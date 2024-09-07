@@ -1,0 +1,14 @@
+---
+includes:
+  htm:
+    dir: ./htm
+    taskfile: ./htm
+  nix:
+    dir: ./nix
+    taskfile: ./nix
+  tsx:
+    dir: ./tsx
+    taskfile: ./tsx
+silent: true
+tasks: null
+version: '3'

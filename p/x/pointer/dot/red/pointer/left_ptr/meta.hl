@@ -1,0 +1,7 @@
+resize_algorithm = bilinear
+hotspot_x = 0.5
+hotspot_y = 0.5
+define_override = xterm
+define_override = arrow
+define_override = default
+define_size = 4, red.svg

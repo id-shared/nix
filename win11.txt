@@ -1,0 +1,4 @@
+netsh advfirewall firewall add rule name="Open Port Range 1001-2000" dir=in action=allow protocol=TCP localport=1001-2000
+
+
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "1"
